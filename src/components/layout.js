@@ -37,21 +37,22 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{position: `absolute`, left: `0`, bottom: `0`, width: `100%`}}>
-          <hr style={{margin: `0 auto`, padding: `0`, height: `2px`, width: `100px`, backgroundColor: `#333`}}/>
-          <div style={{display: `flex`, flexDirection: `column`,justifyContent: `center`, alignItems: `center`, minHeight: `96px`, paddingBottom:`12px`}}>
+        <footer style={{position: `fixed`, left: `0`, bottom: `0`, width: `100%`, backgroundColor: `white`}}>
+          <hr style={{margin: `0 auto`, padding: `0`, height: `2px`, width: `100px`, backgroundColor: `black`, marginTop: `8px`}}/>
+          <div style={{display: `flex`, flexDirection: `column`,justifyContent: `center`, alignItems: `center`, minHeight: `96px`, }}>
             {/* <a href="https://www.instagram.com/rakisoundscape/" target="_blank" rel="noreferrer">
-              <img src={raki} alt="raki" width="40px" style={{margin: `0`}} />
+              <img src={raki} alt="raki" width="32px" style={{margin: `0`}} />
             </a> */}
             <div style={{display:`flex`,flexFlow:`column nowrap`,justifyContent:`center`,alignItems:`center`}}>
-            <div style={{width:`300px`, display:`flex`,flexFlow:`row nowrap`,justifyContent:`space-between`,alignItems:`center`, fontSize:`48px`}} >
-              <a href="http://instagram.com/alexcade_" style={{color:`#333`}}><FaInstagram size={32} /></a>
-              <a href="https://twitter.com/AlexCade_" style={{color:`#333`}}><FaTwitter size={32} /></a>
-              <a href="https://www.youtube.com/channel/UCSnZdadARid6EltLdOC8GZg" style={{color:`#333`}}><FaYoutube size={32} /></a>
-              <a href="https://open.spotify.com/artist/2V59zAACFhQSmn096tsLTI?si=DBai3Op5QveGprQfBx0vUA" style={{color:`#333`}}><FaSpotify size={32} /></a>
-              <a href="https://soundcloud.com/alexcade" style={{color:`#333`}}><FaSoundcloud size={32} /></a>
+              <div style={{width:`300px`, display:`flex`,flexFlow:`row nowrap`,justifyContent:`space-between`,alignItems:`center`, fontSize:`48px`}} >
+                <a href="http://instagram.com/alexcade_" style={{color:`#333`}}><FaInstagram size={32} color="black" /></a>
+                <a href="https://twitter.com/AlexCade_" style={{color:`#333`}}><FaTwitter size={32} color="black" /></a>
+                <a href="https://www.youtube.com/channel/UCSnZdadARid6EltLdOC8GZg" style={{color:`#333`}}><FaYoutube size={32} color="black" /></a>
+                <a href="https://open.spotify.com/artist/2V59zAACFhQSmn096tsLTI?si=DBai3Op5QveGprQfBx0vUA" style={{color:`#333`}}><FaSpotify size={32} color="black" /></a>
+                <a href="https://soundcloud.com/alexcade" style={{color:`#333`}}><FaSoundcloud size={32} color="black" /></a>
+              </div>
             </div>
-          </div>
+            {/* <div style={{backgroundColor: "white", width: "8px", height: "8px", borderRadius: "50%", marginTop: "16px"}}/> */}
           </div>
           </footer>
       </div>
