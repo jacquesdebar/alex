@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `ALEX CADE`,
+    description: `Alex Cade is a hip-hop artist based in Seattle, WA.`,
     author: `@gatsbyjs`,
   },
   plugins: [

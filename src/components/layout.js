@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import raki from "../images/raki.png"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,11 +35,14 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer style={{position: `absolute`, left: `0`, bottom: `0`, width: `100%`}}>
+          <hr style={{margin: `0 auto`, padding: `0`, height: `2px`, width: `100px`, backgroundColor: `#333`}}/>
+          <div style={{display: `flex`, flexDirection: `row`,justifyContent: `center`, alignItems: `center`, height: `96px`, paddingBottom:`12px`}}>
+            <a href="https://www.instagram.com/rakisoundscape/" target="_blank">
+              <img src={raki} alt="raki" width="40px" style={{margin: `0`}} />
+            </a>
+          </div>
+          </footer>
       </div>
     </>
   )
