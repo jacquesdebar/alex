@@ -13,6 +13,8 @@ import Header from "./header"
 import "./layout.css"
 import raki from "../images/raki.png"
 
+import { FaSpotify, FaSoundcloud, FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa';
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -37,10 +39,19 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer style={{position: `absolute`, left: `0`, bottom: `0`, width: `100%`}}>
           <hr style={{margin: `0 auto`, padding: `0`, height: `2px`, width: `100px`, backgroundColor: `#333`}}/>
-          <div style={{display: `flex`, flexDirection: `row`,justifyContent: `center`, alignItems: `center`, height: `96px`, paddingBottom:`12px`}}>
-            <a href="https://www.instagram.com/rakisoundscape/" target="_blank" rel="noreferrer">
+          <div style={{display: `flex`, flexDirection: `column`,justifyContent: `center`, alignItems: `center`, minHeight: `96px`, paddingBottom:`12px`}}>
+            {/* <a href="https://www.instagram.com/rakisoundscape/" target="_blank" rel="noreferrer">
               <img src={raki} alt="raki" width="40px" style={{margin: `0`}} />
-            </a>
+            </a> */}
+            <div style={{display:`flex`,flexFlow:`column nowrap`,justifyContent:`center`,alignItems:`center`}}>
+            <div style={{width:`300px`, display:`flex`,flexFlow:`row nowrap`,justifyContent:`space-between`,alignItems:`center`, fontSize:`48px`}} >
+              <a href="http://instagram.com/alexcade_" style={{color:`#333`}}><FaInstagram size={32} /></a>
+              <a href="https://twitter.com/AlexCade_" style={{color:`#333`}}><FaTwitter size={32} /></a>
+              <a href="https://www.youtube.com/channel/UCSnZdadARid6EltLdOC8GZg" style={{color:`#333`}}><FaYoutube size={32} /></a>
+              <a href="https://open.spotify.com/artist/2V59zAACFhQSmn096tsLTI?si=DBai3Op5QveGprQfBx0vUA" style={{color:`#333`}}><FaSpotify size={32} /></a>
+              <a href="https://soundcloud.com/alexcade" style={{color:`#333`}}><FaSoundcloud size={32} /></a>
+            </div>
+          </div>
           </div>
           </footer>
       </div>
